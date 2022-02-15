@@ -11,7 +11,7 @@ public class Notas {
 		//y nos muestra lo que queda en la colección
 		ArrayList<Double> notas=new ArrayList<Double>();
 		Scanner sc=new Scanner(System.in);
-		for(int i=1;i<=5;i++) {
+		for(int i=1;i<=3;i++) {
 			System.out.println("Introduce nota: ");
 			notas.add(sc.nextDouble());
 		}
