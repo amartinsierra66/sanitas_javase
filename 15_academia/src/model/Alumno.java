@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Alumno {
 	private String nombre;
 	private String curso;
@@ -27,5 +29,27 @@ public class Alumno {
 	public void setNota(double nota) {
 		this.nota = nota;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(curso, nombre, nota);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Alumno other = (Alumno) obj;
+		return Objects.equals(curso, other.curso) && Objects.equals(nombre, other.nombre)
+				&& Double.doubleToLongBits(nota) == Double.doubleToLongBits(other.nota);
+	}
+	@Override
+	public String toString() {
+		return "Alumno [nombre=" + nombre + ", curso=" + curso + ", nota=" + nota + "]";
+	}
+	
+	
 	
 }

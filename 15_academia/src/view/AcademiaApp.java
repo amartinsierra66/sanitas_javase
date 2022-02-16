@@ -36,7 +36,8 @@ public class AcademiaApp {
 					curso=sc.nextLine();
 					HashSet<Alumno> alumnos=service.alumnosCurso(curso);
 					for(Alumno al:alumnos) {
-						System.out.println(al.getNombre()+"-"+al.getNota());
+						//System.out.println(al.getNombre()+"-"+al.getNota());
+						System.out.println(al.toString());
 					}
 			}		
 		}while(option!=4);
