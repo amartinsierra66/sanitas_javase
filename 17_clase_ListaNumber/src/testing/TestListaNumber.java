@@ -24,12 +24,17 @@ class TestListaNumber {
 
 	@Test
 	void testInvertir() {
-		
+		assertTrue(lista.add(20));
+		assertTrue(lista.add(10));
+		lista.invertir();
+		assertEquals(10, lista.get(0));
 	}
 
 	@Test
 	void testToString() {
-		
+		assertTrue(lista.add(20));
+		assertTrue(lista.add(10));
+		assertEquals("20,10", lista.toString());
 	}
 
 }
