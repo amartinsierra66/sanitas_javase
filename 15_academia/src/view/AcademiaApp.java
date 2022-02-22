@@ -35,10 +35,11 @@ public class AcademiaApp {
 					System.out.println("Curso:");
 					curso=sc.nextLine();
 					HashSet<Alumno> alumnos=service.alumnosCurso(curso);
-					for(Alumno al:alumnos) {
+					/*for(Alumno al:alumnos) {
 						//System.out.println(al.getNombre()+"-"+al.getNota());
 						System.out.println(al.toString());
-					}
+					}*/
+					alumnos.forEach(al->System.out.println(al.toString()));
 			}		
 		}while(option!=4);
 	}

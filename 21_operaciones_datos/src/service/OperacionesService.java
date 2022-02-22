@@ -7,6 +7,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class OperacionesService {
+	
 	/*public int sumaPares(List<Integer> lista) {
 		int suma=0;
 		for(Integer num:lista) {
@@ -32,6 +33,12 @@ public class OperacionesService {
 				suma+=num;
 			}
 		}
+		/*lista.forEach(n->{
+			if(criterio.test(n)) {
+				suma+=n; //no se pueden modificar variables locales en la expresión lambda
+			}
+		});
+		*/
 		return suma;
 	}
 	
