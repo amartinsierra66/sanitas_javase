@@ -12,7 +12,8 @@ public class AlumnosLocator {
 	public static Stream<Alumno> getStream(){
 		try {
 			return Files.lines(Path.of(dir))//Stream<String>
-					.map(s->convertirAlumno(s));
+					.map(s->convertirAlumno(s))
+					.parallel();
 		}catch(IOException ex) {
 			return Stream.empty();
 		}
